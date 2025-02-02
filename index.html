@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <header>
+        <h1>Personal Budget Tracker</h1>
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#add-details">Add Income/Expense</a>
+            <a href="#summary">View Summary</a>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h2>Welcome to the Personal Budget Tracker</h2>
+        <p>This tracker allows you to efficiently manage your monthly expenses. You can add your income, record expenses, categorize them, and view a summary of your financial situation. Stay on top of your spending and savings!</p>
+    </section>
+
+    <section id="add-details">
+        <h2>Add Income/Expense</h2>
+        <form id="budget-form">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Enter amount" required>
+            
+            <label for="category">Category</label>
+            <select id="category" required>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Salary">Salary</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+            
+            <label for="type">Type</label>
+            <select id="type" required>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+
+            <button type="submit">Add</button>
+        </form>
+    </section>
+
+    <section id="summary">
+        <h2>Budget Summary</h2>
+        <table id="budget-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="budget-summary"></tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>Personal Budget Tracker &copy; 2025 | Version 1.0</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
